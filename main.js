@@ -28,7 +28,7 @@ function showCard(i) {
   const card = availableCards[i];
   if (!card) return;
 
-  // Front only shows the word
+  // Front shows only the word
   front.textContent = card.word;
 
   // Back shows translation + sentences
@@ -70,7 +70,7 @@ function prevCard() {
 
 // --- Event Listeners ---
 
-// Flip card on click
+// Flip card on click (desktop)
 flashcard.addEventListener("click", () => {
   flashcard.classList.toggle("flipped");
 });
@@ -86,13 +86,20 @@ let startX = 0;
 flashcard.addEventListener("touchstart", e => {
   startX = e.touches[0].clientX;
 });
+
 flashcard.addEventListener("touchend", e => {
   let endX = e.changedTouches[0].clientX;
-  if (startX - endX > 50) {
-    nextCard();
-  } else if (endX - startX > 50) {
-    prevCard();
+  let deltaX = endX - startX;
+
+  if (Math.abs(deltaX) > 50) {
+    // Swipe detected
+    if (deltaX < 0) {
+      nextCard();
+    } else {
+      prevCard();
+    }
   } else {
+    // Tap (small movement)
     flashcard.classList.toggle("flipped");
   }
 });
