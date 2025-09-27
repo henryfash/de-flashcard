@@ -11,10 +11,11 @@ function showCard(i) {
   front.textContent = card.word;
 
   back.innerHTML = `
-    <div class="top">${card.word} — ${card.translationWord}</div>
-    <div class="middle">${card.sentence}</div>
-    <div class="bottom">${card.translationSentence}</div>
-  `;
+  <div class="top">${card.translationWord}</div>
+  <div class="middle">${card.sentence}</div>
+  <div class="bottom">${card.translationSentence}</div>
+`;
+
 
   flashcard.classList.remove("flipped");
 }
