@@ -21,7 +21,7 @@ function shuffle(array) {
 }
 
 function updateProgress() {
-  progressEl.textContent = `Card ${currentIndex + 1} / ${availableCards.length}`;
+  progressEl.textContent = `${currentIndex + 1} / ${availableCards.length}`;
 }
 
 function showCard(i) {
