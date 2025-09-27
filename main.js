@@ -70,12 +70,12 @@ function prevCard() {
 
 // --- Event Listeners ---
 
-// Flip card on click (desktop)
+// Flip card on click/tap
 flashcard.addEventListener("click", () => {
   flashcard.classList.toggle("flipped");
 });
 
-// Buttons
+// Navigation buttons
 nextBtn.addEventListener("click", nextCard);
 prevBtn.addEventListener("click", prevCard);
 resetBtn.addEventListener("click", resetCards);
@@ -92,14 +92,14 @@ flashcard.addEventListener("touchend", e => {
   let deltaX = endX - startX;
 
   if (Math.abs(deltaX) > 50) {
-    // Swipe detected
+    // Swipe navigation
     if (deltaX < 0) {
       nextCard();
     } else {
       prevCard();
     }
   } else {
-    // Tap (small movement)
+    // Tap (small movement) = flip
     flashcard.classList.toggle("flipped");
   }
 });

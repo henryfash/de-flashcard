@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>German Flashcards</title>
+  <title>German B1</title>
   <style>
     body { 
       font-family: sans-serif; 
@@ -45,10 +45,10 @@
     }
 
     .front {
-      background: #ffecdf;
-      font-size: clamp(20px, 5vw, 32px); /* larger responsive text */
+      background: linear-gradient(135deg, #ffecd2, #fcb69f);
+      font-size: clamp(20px, 5vw, 32px);
       font-weight: bold;
-     }
+    }
 
     .back {
       background: #d0e0ff;
@@ -80,8 +80,8 @@
       padding: 12px 18px;
       font-size: clamp(14px, 4vw, 18px);
     }
- button {
-flex: 1;
+    button {
+      flex: 1;
       max-width: 150px;
       padding: 12px 18px;
       font-size: clamp(14px, 4vw, 18px);
@@ -125,7 +125,7 @@ flex: 1;
   </style>
 </head>
 <body>
-  <h1>German B1 Words</h1>
+  <h1>German B1</h1>
 
   <label for="wordCount">Show words:</label>
   <select id="wordCount">
@@ -135,12 +135,12 @@ flex: 1;
     <option value="all">All</option>
   </select>
   <button id="resetBtn">Reset</button>
-  
+
   <div class="card" id="flashcard">
     <div class="front" id="front"></div>
     <div class="back" id="back"></div>
   </div>
-  
+
   <p id="progress"></p>
 
   <div class="controls">
