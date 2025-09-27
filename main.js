@@ -9,9 +9,10 @@ const wordCountSelect = document.getElementById("wordCount");
 const resetBtn = document.getElementById("resetBtn");
 const nextBtn = document.getElementById("nextBtn");
 const prevBtn = document.getElementById("prevBtn");
+const flipBtn = document.getElementById("flipBtn");
 const progressEl = document.getElementById("progress");
 
-// Fisher-Yates shuffle
+// Shuffle helper
 function shuffle(array) {
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -28,10 +29,7 @@ function showCard(i) {
   const card = availableCards[i];
   if (!card) return;
 
-  // Front shows only the word
   front.textContent = card.word;
-
-  // Back shows translation + sentences
   back.innerHTML = `
     <div class="top">${card.translationWord}</div>
     <div class="middle">${card.sentence}</div>
@@ -44,16 +42,8 @@ function showCard(i) {
 
 function resetCards() {
   const wordCount = wordCountSelect.value;
-
-  // Reshuffle cards each reset
   let shuffledCards = shuffle([...cards]);
-
-  if (wordCount === "all") {
-    availableCards = shuffledCards;
-  } else {
-    availableCards = shuffledCards.slice(0, parseInt(wordCount));
-  }
-
+  availableCards = wordCount === "all" ? shuffledCards : shuffledCards.slice(0, parseInt(wordCount));
   currentIndex = 0;
   showCard(currentIndex);
 }
@@ -70,18 +60,23 @@ function prevCard() {
 
 // --- Event Listeners ---
 
-// Flip card on click/tap
+// Flip card on click/tap (card itself)
 flashcard.addEventListener("click", () => {
   flashcard.classList.toggle("flipped");
 });
 
-// Navigation buttons
+// Flip with button
+flipBtn.addEventListener("click", () => {
+  flashcard.classList.toggle("flipped");
+});
+
+// Navigation
 nextBtn.addEventListener("click", nextCard);
 prevBtn.addEventListener("click", prevCard);
 resetBtn.addEventListener("click", resetCards);
 wordCountSelect.addEventListener("change", resetCards);
 
-// Swipe gestures for mobile
+// Swipe navigation (mobile)
 let startX = 0;
 flashcard.addEventListener("touchstart", e => {
   startX = e.touches[0].clientX;
@@ -92,14 +87,13 @@ flashcard.addEventListener("touchend", e => {
   let deltaX = endX - startX;
 
   if (Math.abs(deltaX) > 50) {
-    // Swipe navigation
     if (deltaX < 0) {
       nextCard();
     } else {
       prevCard();
     }
   } else {
-    // Tap (small movement) = flip
+    // Small tap also flips (works same as click)
     flashcard.classList.toggle("flipped");
   }
 });
