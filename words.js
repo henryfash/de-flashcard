@@ -74,7 +74,22 @@ const cards = [
 { word: "eifersüchtig", sentence: "Er ist eifersüchtig auf seinen Bruder.", translationWord: "eifersüchtig = jealous", translationSentence: "He is jealous of his brother." },
 { word: "schlimm", sentence: "Das Wetter ist heute schlimm.", translationWord: "schlimm = bad / terrible", translationSentence: "The weather is terrible today." },
 { word: "dünn", sentence: "Die Katze ist sehr dünn.", translationWord: "dünn = thin / slim", translationSentence: "The cat is very thin." },
-{ word: "hübsch", sentence: "Das Mädchen ist sehr hübsch.", translationWord: "hübsch = pretty / handsome", translationSentence: "The girl is very pretty." }
+{ word: "hübsch", sentence: "Das Mädchen ist sehr hübsch.", translationWord: "hübsch = pretty / handsome", translationSentence: "The girl is very pretty." },
+{ word: "die Braut", sentence: "Die Braut trägt ein schönes weißes Kleid.", translationWord: "die Braut = bride", translationSentence: "The bride is wearing a beautiful white dress." },
+{ word: "die Anrede", sentence: "Die Anrede in einem Brief ist sehr wichtig.", translationWord: "die Anrede = salutation / form of address", translationSentence: "The salutation in a letter is very important." },
+{ word: "der Anfang", sentence: "Am Anfang war das Wetter schlecht.", translationWord: "der Anfang = beginning / start", translationSentence: "At the beginning, the weather was bad." },
+{ word: "der Schlusssatz", sentence: "Der Schlusssatz im Brief soll freundlich sein.", translationWord: "der Schlusssatz = closing sentence", translationSentence: "The closing sentence in the letter should be friendly." },
+{ word: "überlege", sentence: "Ich überlege, was ich am Wochenende mache.", translationWord: "überlege (ich überlege) = I think about / I consider", translationSentence: "I’m thinking about what I’ll do on the weekend." },
+{ word: "notwendig", sentence: "Ein Pass ist für die Reise notwendig.", translationWord: "notwendig = necessary", translationSentence: "A passport is necessary for the trip." },
+{ word: "die Einleitung", sentence: "Die Einleitung des Textes erklärt das Thema.", translationWord: "die Einleitung = introduction", translationSentence: "The introduction of the text explains the topic." },
+{ word: "einlösen", sentence: "Ich möchte meinen Gutschein einlösen.", translationWord: "einlösen = to redeem / to cash in", translationSentence: "I would like to redeem my voucher." },
+{ word: "darüber", sentence: "Wir haben gestern darüber gesprochen.", translationWord: "darüber = about it / about that", translationSentence: "We talked about it yesterday." },
+{ word: "eigentlich", sentence: "Ich wollte dich eigentlich anrufen.", translationWord: "eigentlich = actually / really", translationSentence: "I actually wanted to call you." },
+{ word: "vorschlage", sentence: "Ich schlage vor, dass wir jetzt anfangen.", translationWord: "vorschlage (ich schlage vor) = I suggest", translationSentence: "I suggest that we start now." },
+{ word: "reagieren", sentence: "Wie hast du auf die Nachricht reagiert?", translationWord: "reagieren = to react / to respond", translationSentence: "How did you react to the news?" },
+{ word: "die Heirat", sentence: "Ihre Heirat fand im Sommer statt.", translationWord: "die Heirat = marriage / wedding", translationSentence: "Their wedding took place in the summer." },
+{ word: "verwitwet", sentence: "Sie ist seit vielen Jahren verwitwet.", translationWord: "verwitwet = widowed", translationSentence: "She has been widowed for many years." },
+{ word: "die Personalien", sentence: "Bitte geben Sie Ihre Personalien an.", translationWord: "die Personalien = personal details / personal information", translationSentence: "Please provide your personal details." }
 ];
 cards.push(
   { word: "die Geschichte", sentence: "Die Geschichte spielt im 19. Jahrhundert.", translationWord: "die Geschichte = story/history", translationSentence: "The story takes place in the 19th century." },
